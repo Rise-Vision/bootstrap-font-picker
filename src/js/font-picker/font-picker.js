@@ -244,6 +244,10 @@
       contentDocument = contentDoc;
     }
 
+    function reset() {
+      setFont("Arial, 'Helvetica Neue', Helvetica, sans-serif");
+    }
+
     /*
      * Load the selected Google font and add it to the drop-down.
      *
@@ -276,11 +280,12 @@
     _init();
 
     return {
-      getFont: getFont,
-      getFontStyle: getFontStyle,
-      getFontURL: getFontURL,
-      setFont: setFont,
+      getFont:       getFont,
+      getFontStyle:  getFontStyle,
+      getFontURL:    getFontURL,
+      setFont:       setFont,
       setContentDoc: setContentDocument,
+      reset:         reset,
       addGoogleFont: addGoogleFont,
     };
   }

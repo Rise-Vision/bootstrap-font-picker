@@ -20,10 +20,10 @@
   "dependencies": {
     "angular": "1.2.18",
     "bootstrap-select": "1.5.4",
-    "common": "https://github.com/Rise-Vision/common.git",
     "common-style": "https://github.com/Rise-Vision/common-style.git",
     "jquery": "1.11.0",
     "rv-bootstrap-formhelpers": "https://github.com/Rise-Vision/BootstrapFormHelpers.git#2.3.5-rv",
+    "widget-common": "https://github.com/Rise-Vision/widget-common.git",
     "widget-settings-ui-components": "https://github.com/Rise-Vision/widget-settings-ui-components.git"
   }
 }
