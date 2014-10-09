@@ -9,9 +9,10 @@
 
   function Plugin(element, options) {
     var $element = $(element);
+    var defaultSize = "14";
 
     options = $.extend({}, {
-      "font-size":  "14",
+      "font-size":  defaultSize,
       "blank":      false,
     }, options);
 
@@ -64,11 +65,16 @@
       }
     }
 
+    function reset() {
+      setSize(defaultSize);
+    }
+
     _init();
 
     return {
       getFontSize: getSize,
-      setFontSize: setSize
+      setFontSize: setSize,
+      reset:       reset,
     };
   }
 
