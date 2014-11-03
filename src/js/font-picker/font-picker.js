@@ -280,6 +280,20 @@
       _sortFontList();
     }
 
+    /*
+     * Load the custom font and save its url.
+     *
+     * @param   string    fontFamily    Font family
+     * @param   string    fontUrl       The URL to load this font
+     */
+    function addCustomFont(fontFamily, fontUrl) {
+      // Load it
+      utils.loadCustomFont(fontFamily, fontUrl, contentDocument);
+
+      customFontURL = fontUrl;
+      currentFont = CUSTOM_FONT_TEXT;
+    }
+
     _init();
 
     return {
@@ -289,7 +303,8 @@
       setFont:       setFont,
       reset:         reset,
       setContentDoc: setContentDocument,
-      addGoogleFont: addGoogleFont
+      addGoogleFont: addGoogleFont,
+      addCustomFont: addCustomFont
     };
   }
 

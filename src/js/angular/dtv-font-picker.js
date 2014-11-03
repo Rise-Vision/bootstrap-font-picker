@@ -25,6 +25,10 @@ angular.module('risevision.widget.common.fontpicker', [])
         $scope.$watch("font", function(font) {
           if (font) {
             picker.setFont(font.family);
+
+            if (font.hasOwnProperty("type") && font.type === "custom") {
+              picker.addCustomFont(font.family, font.url);
+            }
           }
         });
 
